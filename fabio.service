@@ -1,0 +1,14 @@
+[Unit]
+Description=Fabio
+Documentation=https://fabiolb.net/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/home/fabio/bin/fabio -cfg /home/fabio/fabio.properties
+
+[Install]
+WantedBy=multi-user.target
